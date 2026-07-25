@@ -1,26 +1,227 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-serif: var(--font-serif), Georgia, serif;
+  
+  --color-brand-cream: var(--color-bg-cream);
+  --color-brand-teal: var(--color-bg-teal);
+  --color-brand-teal-light: var(--color-bg-teal-light);
+  --color-brand-teal-hover: var(--color-bg-teal-hover);
+  --color-brand-orange: var(--color-bg-orange);
+  --color-brand-orange-hover: var(--color-bg-orange-hover);
+  --color-brand-tan: var(--color-bg-tan);
+  --color-brand-sand: var(--color-bg-sand);
+  
+  /* Layered, organic shadows for depth modeling */
+  --shadow-premium-sm: var(--shadow-sm-val);
+  --shadow-premium-md: var(--shadow-md-val);
+  --shadow-premium-lg: var(--shadow-lg-val);
+  --shadow-glass: var(--shadow-glass-val);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root, .theme-warm {
+  --color-bg-cream: #FAF9F5;
+  --color-bg-teal: #0E2E34;
+  --color-bg-teal-light: #24535B;
+  --color-bg-teal-hover: #164047;
+  --color-bg-orange: #D97736;
+  --color-bg-orange-hover: #c46325;
+  --color-bg-tan: #E4D1B9;
+  --color-bg-sand: #f2eee5;
+  
+  --shadow-sm-val: 0 2px 4px rgba(14, 46, 52, 0.02), 0 0 0 1px rgba(14, 46, 52, 0.02);
+  --shadow-md-val: 0 4px 10px -2px rgba(14, 46, 52, 0.03), 0 12px 24px -4px rgba(14, 46, 52, 0.06), 0 0 0 1px rgba(14, 46, 52, 0.015);
+  --shadow-lg-val: 0 10px 20px -5px rgba(14, 46, 52, 0.02), 0 24px 48px -8px rgba(14, 46, 52, 0.08), 0 0 0 1px rgba(14, 46, 52, 0.02);
+  --shadow-glass-val: 0 12px 40px -8px rgba(14, 46, 52, 0.06), inset 0 1px 1px 0 rgba(255, 255, 255, 0.6);
+  
+  --glass-panel-bg: rgba(249, 248, 243, 0.75);
+  --glass-panel-border: rgba(44, 94, 103, 0.12);
+  
+  --glass-card-bg: rgba(255, 255, 255, 0.65);
+  --glass-card-border: rgba(44, 94, 103, 0.08);
+  --glass-card-hover-bg: rgba(255, 255, 255, 0.88);
+  --glass-card-hover-border: rgba(217, 119, 54, 0.28);
+  --glass-card-hover-shadow: 0 24px 48px -12px rgba(18, 60, 68, 0.08);
+  --glass-card-text-mute: #24535B;
+  
+  --focus-ring-color: #D97736;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.theme-dark {
+  --color-bg-cream: #0B2125;
+  --color-bg-teal: #F4F6F6;
+  --color-bg-teal-light: #C2D1D4;
+  --color-bg-teal-hover: #FFFFFF;
+  --color-bg-orange: #E0874A;
+  --color-bg-orange-hover: #F29E65;
+  --color-bg-tan: #1F454D;
+  --color-bg-sand: #133238;
+  
+  --shadow-sm-val: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.03);
+  --shadow-md-val: 0 4px 12px -2px rgba(0, 0, 0, 0.35), 0 12px 28px -4px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.02);
+  --shadow-lg-val: 0 12px 24px -5px rgba(0, 0, 0, 0.45), 0 28px 56px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.03);
+  --shadow-glass-val: 0 14px 42px -8px rgba(0, 0, 0, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
+  
+  --glass-panel-bg: rgba(11, 33, 37, 0.88);
+  --glass-panel-border: rgba(194, 209, 212, 0.15);
+  
+  --glass-card-bg: rgba(19, 50, 56, 0.68);
+  --glass-card-border: rgba(194, 209, 212, 0.08);
+  --glass-card-hover-bg: rgba(23, 62, 69, 0.88);
+  --glass-card-hover-border: rgba(224, 135, 74, 0.35);
+  --glass-card-hover-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.55);
+  --glass-card-text-mute: #C2D1D4;
+  
+  --focus-ring-color: #E0874A;
+}
+
+.theme-high {
+  --color-bg-cream: #000000;
+  --color-bg-teal: #FFFF00;
+  --color-bg-teal-light: #FFFFFF;
+  --color-bg-teal-hover: #FFFF00;
+  --color-bg-orange: #FFFF00;
+  --color-bg-orange-hover: #FFFFFF;
+  --color-bg-tan: #FFFFFF;
+  --color-bg-sand: #1C1C00;
+  
+  --shadow-sm-val: none;
+  --shadow-md-val: none;
+  --shadow-lg-val: none;
+  --shadow-glass-val: none;
+  
+  --glass-panel-bg: #000000;
+  --glass-panel-border: #FFFFFF;
+  
+  --glass-card-bg: #000000;
+  --glass-card-border: #FFFFFF;
+  --glass-card-hover-bg: #111111;
+  --glass-card-hover-border: #FFFF00;
+  --glass-card-hover-shadow: none;
+  --glass-card-text-mute: #FFFFFF;
+  
+  --focus-ring-color: #FFFF00;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-teal);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Glassmorphism Refinements */
+.glass-panel {
+  background: var(--glass-panel-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-panel-border);
+  box-shadow: var(--shadow-glass);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.glass-panel-dark {
+  background: rgba(18, 60, 68, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(234, 215, 195, 0.16);
+  box-shadow: 0 20px 50px -12px rgba(10, 30, 34, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: var(--glass-card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-card-border);
+  box-shadow: var(--shadow-premium-md);
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover, .glass-card:focus-within {
+  background: var(--glass-card-hover-bg);
+  border-color: var(--glass-card-hover-border);
+  box-shadow: var(--glass-card-hover-shadow);
+  transform: translateY(-4px) scale(1.005);
+}
+
+/* Accessible focus rings */
+*:focus-visible {
+  outline: 3.5px solid var(--focus-ring-color);
+  outline-offset: 2.5px;
+}
+
+/* Scroll offset for fixed navbar link anchors */
+section[id] {
+  scroll-margin-top: 5.5rem; /* ~88px header height offset */
+}
+
+/* Limestone double-border masonry styling */
+.border-stone-double {
+  border-style: double;
+  border-width: 6px;
+  border-color: var(--color-brand-tan);
+}
+
+/* Print Show/Hide Styles for Fridge-Friendly Printout */
+.print-only {
+  display: none !important;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #123C44 !important;
+    font-size: 12pt !important;
+    font-family: Georgia, serif !important;
+  }
+
+  header,
+  footer,
+  #hero,
+  #contact,
+  .fixed,
+  button,
+  .print-hide {
+    display: none !important;
+  }
+
+  #services,
+  #vhs-special,
+  #tech-tips {
+    display: block !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .glass-card {
+    background: #ffffff !important;
+    border: 2px solid #123C44 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem !important;
+    border-radius: 12px !important;
+    color: #123C44 !important;
+  }
+
+  h1, h2, h3, h4 {
+    color: #123C44 !important;
+    page-break-after: avoid;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #123C44 !important;
+  }
 }
