@@ -7,7 +7,6 @@ import { businessConfig } from "@/config/business";
 
 export default function Footer() {
   const [currentYear, setCurrentYear] = useState<number>(2026);
-  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
