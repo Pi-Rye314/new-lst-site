@@ -292,7 +292,7 @@ export const businessConfig: BusinessConfig = {
     },
     {
       quote: "We recently found an old VHS tape of our daughter’s wedding, 1994. It was  frail and needed to be preserved so we could share it with family and friends. Seeing people who are no longer with us was so very special, as were the festivities of course! Ryan from Little Stone Tech Co. took it, put one copy on a flash drive, second on a DVD. He picked up from our home and delivered them back. Excellent service and very good price! Please check out your treasures then contact Ryan. Then… have a party to watch them, that’s our plan😊😊",
-      author: "Margaret H.",
+      author: "Marilyn",
       location: "St. Marys Resident"
     },
     {
