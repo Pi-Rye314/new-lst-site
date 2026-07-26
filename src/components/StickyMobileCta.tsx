@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import { Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { businessConfig } from "@/config/business";
@@ -43,14 +42,14 @@ export default function StickyMobileCta() {
             <span>Click Here to Call Ryan Directly</span>
           </a>
 
-          {/* Action 2: Book Visit Link */}
-          <Link
-            href="/contact"
+          {/* Action 2: Email Link */}
+          <a
+            href={`mailto:${businessConfig.contact.email}`}
             className="text-base font-bold text-brand-teal hover:text-brand-orange transition-colors py-1 outline-none focus-visible:underline"
-            aria-label="Or request a call back"
+            aria-label="Or email Ryan directly"
           >
-            Or request a call back
-          </Link>
+            Or email Ryan directly
+          </a>
         </motion.div>
       )}
     </AnimatePresence>

@@ -9,7 +9,7 @@ import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Ryan - In-Home Tech Support | Little Stone Tech Co.",
-  description: "Get in touch with Ryan Wilson at Little Stone Tech Co. Request a call back or call directly at 226-921-5949 for trusted technology support in St. Marys, ON.",
+  description: "Get in touch with Ryan Wilson at Little Stone Tech Co. Call directly at 226-921-5949 or email r.wilson@littlestonetech.ca for trusted technology support in St. Marys, ON.",
 };
 
 export default function ContactPage() {
@@ -43,7 +43,7 @@ export default function ContactPage() {
             </h1>
             <div className="w-24 h-1 bg-brand-orange mx-auto mt-6 rounded-full" />
             <p className="text-lg sm:text-xl text-brand-teal-light font-medium mt-4 leading-relaxed">
-              Have a question about a device, need in-home tech support in St. Marys, or want to digitize your VHS tapes? Reach out directly or request a quick call back below.
+              Have a question about a device, need in-home tech support in St. Marys, or want to digitize your VHS tapes? Reach out directly via phone, text, or email below.
             </p>
           </div>
         </div>

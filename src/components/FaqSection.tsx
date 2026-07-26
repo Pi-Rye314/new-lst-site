@@ -91,7 +91,7 @@ export default function FaqSection() {
               href="/contact"
               className="text-brand-orange hover:text-brand-orange-hover font-bold underline underline-offset-4 transition-colors ml-1 cursor-pointer"
             >
-              Ask Ryan directly or request a call back
+              Contact Ryan directly
             </Link>
           </p>
         </div>
