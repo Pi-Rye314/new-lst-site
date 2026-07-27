@@ -18,9 +18,9 @@ export default function ContactSection() {
         
         {/* Reusable Section Header */}
         <SectionHeader
-          tag="Contact Ryan"
-          title="Let's Solve Your Technology Troubles"
-          description="Call, text, or email me directly. I will get back to you promptly to schedule your friendly, stress-free in-home visit."
+          tag="Get in Touch"
+          title="Let's Get Your Tech Running Smoothly"
+          description="Call, text, or email me directly. I'll get back to you quickly to chat about what's going on and schedule a relaxed, jargon-free in-home visit at your convenience."
         />
 
         {/* Contact Content - Centered Layout */}

@@ -36,14 +36,14 @@ export default function ContactPage() {
         <div className="bg-brand-cream py-10 print-hide">
           <div className="max-w-3xl mx-auto text-center px-4">
             <span className="text-base font-bold text-brand-teal-light uppercase tracking-widest mb-3 block">
-              Get In Touch
+              Here for St. Marys
             </span>
             <h1 className="text-4xl sm:text-5xl font-serif font-extrabold text-brand-teal tracking-tight leading-tight">
-              Contact Ryan Wilson
+              Connect with Ryan
             </h1>
             <div className="w-24 h-1 bg-brand-orange mx-auto mt-6 rounded-full" />
             <p className="text-lg sm:text-xl text-brand-teal-light font-medium mt-4 leading-relaxed">
-              Have a question about a device, need in-home tech support in St. Marys, or want to digitize your VHS tapes? Reach out directly via phone, text, or email below.
+              Need some patient, friendly technology support right at your kitchen table? Or ready to rescue your family videos from aging VHS tapes? I'm always happy to chat—reach out via call, text, or email.
             </p>
           </div>
         </div>
