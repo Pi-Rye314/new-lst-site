@@ -298,7 +298,7 @@ export const businessConfig: BusinessConfig = {
     {
       quote: "I want to say a big thank you to Ryan and Ashley. They developed my new website for Edgewood Kennels. They were so helpful and kind. They knew exactly what needed to be done and were very helpful. I am so happy with my website. They are very good at what they do. I would highly recommend Little Stone Tech to anybody that needs a website made for personal or a business. Thank you again Ryan and Ashley. Sincerely, Edgewood Kennels.",
       author: "Kelly - Edgewood Kennels",
-      location: "St. Marys Resident"
+      location: "Granton Resident"
     }
   ],
   faq: [
