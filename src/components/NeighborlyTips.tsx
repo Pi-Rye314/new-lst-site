@@ -41,7 +41,7 @@ const getTipIcon = (category: string) => {
 
 export default function NeighborlyTips() {
   const tips = businessConfig.techTips;
-  const [activeFlyerModal, setActiveFlyerModal] = useState<'tech-check' | 'community-flyer' | null>(null);
+  const [isFlyerModalOpen, setIsFlyerModalOpen] = useState(false);
 
   // Printing engine
   const handlePrint = () => {
@@ -215,22 +215,15 @@ export default function NeighborlyTips() {
                 Want a Physical Copy for Your Fridge?
               </h3>
               <p className="text-base sm:text-lg text-brand-teal-light font-medium leading-relaxed">
-                Technology is easier when you don&apos;t have to navigate menus. Preview and print a high-quality physical checklist to pin to your fridge, or download our St. Marys community security board flyers.
+                Technology is easier when you don&apos;t have to navigate menus. Preview and print a high-quality physical checklist to pin to your fridge.
               </p>
               
               <div className="flex flex-wrap gap-y-2 justify-center lg:justify-start text-xs sm:text-sm font-extrabold text-brand-teal-light gap-x-5">
                 <button
-                  onClick={() => setActiveFlyerModal('tech-check')}
+                  onClick={() => setIsFlyerModalOpen(true)}
                   className="hover:text-brand-teal hover:underline inline-flex items-center cursor-pointer bg-transparent border-none p-0 outline-none"
                 >
                   👁️ Preview Tech Checkup Sheet
-                </button>
-                <span className="text-brand-teal-light/35 hidden sm:inline">•</span>
-                <button
-                  onClick={() => setActiveFlyerModal('community-flyer')}
-                  className="hover:text-brand-teal hover:underline inline-flex items-center cursor-pointer bg-transparent border-none p-0 outline-none"
-                >
-                  👁️ Preview Community Notice Flyer
                 </button>
               </div>
 
@@ -258,13 +251,13 @@ export default function NeighborlyTips() {
 
       {/* LIGHTBOX MODAL PREVIEWS */}
       <AnimatePresence>
-        {activeFlyerModal && (
+        {isFlyerModalOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm print-hide"
-            onClick={() => setActiveFlyerModal(null)}
+            onClick={() => setIsFlyerModalOpen(false)}
           >
             <motion.div
               initial={{ scale: 0.95, y: 15 }}
@@ -276,10 +269,10 @@ export default function NeighborlyTips() {
               {/* Header */}
               <div className="w-full flex items-center justify-between border-b border-brand-teal-light/10 pb-4 mb-4">
                 <h3 className="text-xl font-serif font-extrabold text-brand-teal">
-                  {activeFlyerModal === 'tech-check' ? "Printable Tech Checkup Sheet" : "Printable Community Flyer"}
+                  Printable Tech Checkup Sheet
                 </h3>
                 <button
-                  onClick={() => setActiveFlyerModal(null)}
+                  onClick={() => setIsFlyerModalOpen(false)}
                   className="p-2 text-brand-teal-light hover:text-brand-orange transition-colors min-h-[48px] min-w-[48px] cursor-pointer flex items-center justify-center"
                   aria-label="Close flyer preview"
                 >
@@ -291,8 +284,8 @@ export default function NeighborlyTips() {
               <div className="relative w-full aspect-[4/3] md:aspect-[16/11] bg-brand-cream border border-brand-teal-light/10 rounded-2xl overflow-hidden shadow-inner">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={activeFlyerModal === 'tech-check' ? "/tech_check.png" : "/notice_board_flyer.png"}
-                  alt={activeFlyerModal === 'tech-check' ? "Tech Checkup Sheet" : "Community Notice Board Flyer"}
+                  src="/tech_check.png"
+                  alt="Tech Checkup Sheet"
                   className="w-full h-full object-contain p-2"
                 />
               </div>
@@ -300,7 +293,7 @@ export default function NeighborlyTips() {
               {/* Action row */}
               <div className="mt-6 flex flex-col sm:flex-row gap-3 w-full justify-center">
                 <a
-                  href={activeFlyerModal === 'tech-check' ? "/tech_check.png" : "/notice_board_flyer.png"}
+                  href="/tech_check.png"
                   download
                   className="h-14 px-8 bg-brand-orange hover:bg-brand-orange-hover text-white font-bold text-lg rounded-full flex items-center justify-center transition-all duration-200 min-h-[48px] shadow-sm cursor-pointer"
                 >
@@ -308,7 +301,7 @@ export default function NeighborlyTips() {
                   <span>Download Flyer Image</span>
                 </a>
                 <button
-                  onClick={() => window.open(activeFlyerModal === 'tech-check' ? "/tech_check.png" : "/notice_board_flyer.png", '_blank')}
+                  onClick={() => window.open("/tech_check.png", '_blank')}
                   className="h-14 px-6 border-2 border-brand-teal hover:bg-brand-teal/5 text-brand-teal font-bold text-lg rounded-full flex items-center justify-center transition-all duration-200 min-h-[48px] cursor-pointer"
                 >
                   <span>View Full Size</span>
