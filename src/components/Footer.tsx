@@ -40,7 +40,6 @@ export default function Footer() {
 
             <div className="flex items-center space-x-1 text-base font-semibold text-[#EAD7C3]/80">
               <span>Established 2025</span>
-              <span>Established 2024</span>
               <span>•</span>
               <span>St. Marys, ON</span>
             </div>
