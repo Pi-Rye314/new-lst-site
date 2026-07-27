@@ -66,7 +66,7 @@ export default function NeighborlyTips() {
               </style>
             </head>
             <body>
-              <img src="/tech_check.png" onload="window.focus(); window.print();" />
+              <img src="/tech_check_v2.png" onload="window.focus(); window.print();" />
             </body>
           </html>
         `);
@@ -284,7 +284,7 @@ export default function NeighborlyTips() {
               <div className="relative w-full aspect-[4/3] md:aspect-[16/11] bg-brand-cream border border-brand-teal-light/10 rounded-2xl overflow-hidden shadow-inner">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/tech_check.png"
+                  src="/tech_check_v2.png"
                   alt="Tech Checkup Sheet"
                   className="w-full h-full object-contain p-2"
                 />
@@ -293,7 +293,7 @@ export default function NeighborlyTips() {
               {/* Action row */}
               <div className="mt-6 flex flex-col sm:flex-row gap-3 w-full justify-center">
                 <a
-                  href="/tech_check.png"
+                  href="/tech_check_v2.png"
                   download
                   className="h-14 px-8 bg-brand-orange hover:bg-brand-orange-hover text-white font-bold text-lg rounded-full flex items-center justify-center transition-all duration-200 min-h-[48px] shadow-sm cursor-pointer"
                 >
@@ -301,7 +301,7 @@ export default function NeighborlyTips() {
                   <span>Download Flyer Image</span>
                 </a>
                 <button
-                  onClick={() => window.open("/tech_check.png", '_blank')}
+                  onClick={() => window.open("/tech_check_v2.png", '_blank')}
                   className="h-14 px-6 border-2 border-brand-teal hover:bg-brand-teal/5 text-brand-teal font-bold text-lg rounded-full flex items-center justify-center transition-all duration-200 min-h-[48px] cursor-pointer"
                 >
                   <span>View Full Size</span>
