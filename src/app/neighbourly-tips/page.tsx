@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import NeighborlyTips from "@/components/NeighborlyTips";
 import Footer from "@/components/Footer";
-import StickyMobileCta from "@/components/StickyMobileCta";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
@@ -37,7 +36,6 @@ export default function NeighbourlyTipsPage() {
       </main>
 
       <Footer />
-      <StickyMobileCta />
     </>
   );
 }

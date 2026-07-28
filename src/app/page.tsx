@@ -5,7 +5,6 @@ import VhsPromoBanner from "@/components/VhsPromoBanner";
 import FaqSection from "@/components/FaqSection";
 import TestimonialSection from "@/components/TestimonialSection";
 import Footer from "@/components/Footer";
-import StickyMobileCta from "@/components/StickyMobileCta";
 
 export default function Home() {
   return (
@@ -31,8 +30,6 @@ export default function Home() {
       {/* Footer Block */}
       <Footer />
 
-      {/* Floating Sticky Mobile CTA */}
-      <StickyMobileCta />
     </>
   );
 }
