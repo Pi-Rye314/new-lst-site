@@ -19,20 +19,6 @@ export interface Testimonial {
   location: string;
 }
 
-export interface QuizOption {
-  text: string;
-  isCorrect: boolean;
-}
-
-export interface QuizQuestion {
-  id: number;
-  type: "Email" | "Popup Alert" | "Phone Call";
-  scenario: string;
-  content: string;
-  options: QuizOption[];
-  explanation: string;
-}
-
 export interface HeroConfig {
   badge: string;
   headline: string;
@@ -89,8 +75,8 @@ export interface BusinessConfig {
     details: string[];
   };
   techTips: TechTip[];
-  quizQuestions: QuizQuestion[];
   testimonials: Testimonial[];
+
   faq: FaqItem[];
   branding: {
     colors: {
@@ -247,41 +233,6 @@ export const businessConfig: BusinessConfig = {
       title: "Identify a trusted expert to call for complex technical issues.",
       strategy: "The ultimate defence.",
       why: "Knowing when to call in backup ensures peace of mind."
-    }
-  ],
-  quizQuestions: [
-    {
-      id: 1,
-      type: "Popup Alert",
-      scenario: "You are reading news online when a red flashing window pops up on your screen.",
-      content: "🚨 WARNING! YOUR PC IS INFECTED WITH 19 VIRUSES! Microsoft has locked your computer. Call Microsoft Support immediately at 1-800-999-XXXX to secure your files.",
-      options: [
-        { text: "Scam - Close the browser tab immediately.", isCorrect: true },
-        { text: "Safe - Call the support number to clean the viruses.", isCorrect: false }
-      ],
-      explanation: "Microsoft, Apple, and your internet provider will NEVER show flashing popup phone numbers asking you to call them. This is a support scam trying to charge you hundreds of dollars."
-    },
-    {
-      id: 2,
-      type: "Email",
-      scenario: "You receive an urgent email from 'Netflix Support' with an unofficial email address.",
-      content: "Dear Customer, your credit card on file has failed and your Netflix account will be suspended in 24 hours. Click here to confirm your card details: http://netflix-payment-security.com/signin",
-      options: [
-        { text: "Safe - Click the link to update your card.", isCorrect: false },
-        { text: "Scam - Delete the email and check Netflix directly.", isCorrect: true }
-      ],
-      explanation: "This is a 'phishing' email. Scammers use fake links that look close to Netflix but are designed to steal your passwords and credit cards. Always check the official website or app directly."
-    },
-    {
-      id: 3,
-      type: "Phone Call",
-      scenario: "You receive a phone call from someone claiming to be from the Canada Revenue Agency (CRA).",
-      content: "Hello, this is officer Watson from the CRA. We found errors in your tax return and you owe $2,500. If you do not pay immediately via iTunes gift cards or Bitcoin, local police will issue an arrest warrant.",
-      options: [
-        { text: "Scam - Hang up immediately.", isCorrect: true },
-        { text: "Safe - Follow the directions to avoid arrest.", isCorrect: false }
-      ],
-      explanation: "Government agencies will never threaten you with immediate arrest, send police over the phone, or ask for payment in iTunes gift cards, retail vouchers, or cryptocurrency."
     }
   ],
   testimonials: [

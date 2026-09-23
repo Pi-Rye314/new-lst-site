@@ -53,7 +53,7 @@ export default function Navbar() {
                 {businessConfig.name}
               </span>
               <span className="text-sm text-white/70 font-semibold tracking-wide">
-                {businessConfig.contact.areaServed.split(" • ")[1]}
+                {businessConfig.contact.cityState}
               </span>
             </div>
           </Link>

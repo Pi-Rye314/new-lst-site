@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Heart, Smile } from "lucide-react";
+import { ArrowRight, ShieldCheck, Heart, Smile, Phone } from "lucide-react";
 import { businessConfig } from "@/config/business";
 
 export default function Hero() {
@@ -91,6 +91,39 @@ export default function Hero() {
               ))}
             </motion.div>
 
+            {/* Direct Conversion CTA Buttons */}
+            <motion.div
+              variants={itemVariants}
+              className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 justify-center lg:justify-start"
+            >
+              {/* Primary Call CTA */}
+              <a
+                href={`tel:${businessConfig.contact.phone}`}
+                className="inline-flex items-center justify-center h-14 sm:h-16 px-7 sm:px-8 bg-brand-orange hover:bg-brand-orange-hover text-white font-bold text-lg sm:text-xl rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 min-h-[48px] cursor-pointer"
+                aria-label={`Call Ryan directly at ${businessConfig.contact.phoneFormatted}`}
+              >
+                <Phone className="w-5 h-5 mr-3 shrink-0 animate-pulse text-white" />
+                <span>Call Ryan: {businessConfig.contact.phoneFormatted}</span>
+              </a>
+
+              {/* Secondary CTA */}
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center h-14 sm:h-16 px-7 sm:px-8 bg-white hover:bg-brand-cream text-brand-teal border-2 border-brand-teal-light/20 hover:border-brand-orange font-bold text-lg sm:text-xl rounded-full shadow-md hover:shadow-lg transition-all duration-200 min-h-[48px]"
+              >
+                <span>See In-Home Services</span>
+                <ArrowRight className="w-5 h-5 ml-2.5 shrink-0" />
+              </Link>
+            </motion.div>
+
+            {/* Reassurance Subtext */}
+            <motion.p
+              variants={itemVariants}
+              className="text-sm font-semibold text-brand-teal-light text-center lg:text-left pt-1"
+            >
+              ✓ Free travel in St. Marys &nbsp;•&nbsp; ✓ Zero jargon &nbsp;•&nbsp; ✓ Patient help at your kitchen table
+            </motion.p>
+
           </motion.div>
 
           {/* Hero Right Graphic (5 Columns) */}
@@ -123,22 +156,24 @@ export default function Hero() {
               </motion.div>
             </motion.div>
 
-            {/* Action Buttons under Headshot */}
+            {/* Friendly Personal Intro under Headshot */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full max-w-[390px] flex flex-col gap-4 px-6 lg:px-0"
+              className="w-full max-w-[390px] px-2 text-center"
             >
-
-              {/* Secondary CTA */}
-              <Link
-                href="/services"
-                className="flex items-center justify-center w-full h-16 bg-white hover:bg-brand-cream text-brand-teal border-2 border-brand-teal-light/20 hover:border-brand-orange font-bold text-xl rounded-full shadow-md hover:shadow-lg transition-all duration-200 min-h-[48px]"
-              >
-                <span>See How I Can Help</span>
-                <ArrowRight className="w-5 h-5 ml-2.5" />
-              </Link>
+              <div className="glass-card rounded-2xl p-4 bg-white/80 border border-brand-teal-light/10 shadow-sm">
+                <span className="block font-serif font-extrabold text-lg text-brand-teal">
+                  Ryan Wilson
+                </span>
+                <span className="block text-xs font-bold text-brand-orange uppercase tracking-wider mt-0.5">
+                  Your Local In-Home Tech Advocate
+                </span>
+                <p className="text-sm text-brand-teal-light font-medium mt-2 leading-relaxed">
+                  &ldquo;I visit your home in St. Marys so you don&apos;t have to unplug wires or haul your computer to a shop.&rdquo;
+                </p>
+              </div>
             </motion.div>
           </div>
 
